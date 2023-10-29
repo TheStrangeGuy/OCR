@@ -3,7 +3,7 @@ import cv2
 
 pytesseract.pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
 
-image = cv2.imread('Images\oocr.png')
+image = cv2.imread('Images\oocr.png') //change path to image here
 rgbimg = cv2.cvtColor(image,cv2.COLOR_BGR2RGB)
 print(pytesseract.image_to_string(rgbimg))
 results = pytesseract.image_to_boxes(rgbimg)
